@@ -2,7 +2,7 @@
   "version": 2,
   "functions": {
     "api/checkout/route.ts": {
-      "runtime": "vercel/edge"
+      "runtime": "edge"
     }
   },
   "routes": [
