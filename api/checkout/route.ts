@@ -1,3 +1,7 @@
+
+export async function GET() {
+  return new Response("Hello from /api/checkout!");
+}
 export const config = {
   runtime: 'edge',
 };
