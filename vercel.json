@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "functions": {
+    "api/checkout/route.ts": {
+      "runtime": "edge"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/checkout",
+      "dest": "api/checkout/route.ts"
+    }
+  ]
+}
