@@ -1,15 +1,15 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server'
 
-export async function POST(req: Request) {
-  const body = await req.json();
-  const cartTotal = body.total || 0;
+export const config = {
+  runtime: 'edge',
+}
 
-  // 模拟调用 kakao pay API
-  const kakaoResponse = {
-    tid: 'T1234567890',
-    next_redirect_pc_url: 'https://kakaopay.test/redirect',
-    total: cartTotal
-  };
+export default async function handler(req: NextRequest) {
+  const { searchParams } = new URL(req.url)
+  const total = searchParams.get('total')
 
-  return NextResponse.json(kakaoResponse);
+  return NextResponse.json({
+    message: 'This is KakaoPay Checkout',
+    total: total ?? 'not provided',
+  })
 }
