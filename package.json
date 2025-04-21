@@ -1,10 +1,6 @@
 {
-  "name": "kakaopay-shopify-server",
+  "name": "kakaopaymankiw",
   "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vercel dev",
-    "start": "vercel start"
-  },
-  "dependencies": {}
+  "main": "index.js",
+  "license": "MIT"
 }
