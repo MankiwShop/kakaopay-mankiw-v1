@@ -2,11 +2,8 @@ export const config = {
   runtime: 'edge',
 };
 
-export default async function handler(req: Request) {
-  return new Response(JSON.stringify({ message: "KakaoPay API is working!" }), {
-    status: 200,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+import { NextRequest, NextResponse } from 'next/server';
+
+export async function POST(req: NextRequest) {
+  return NextResponse.json({ message: "KakaoPay API is working!" });
 }
